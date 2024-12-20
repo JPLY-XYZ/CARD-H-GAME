@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap");
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jaro", sans-serif;
+}
+
+/* Estilo del cuerpo */
+body {
+  background-color: #4e4b4b;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#selector {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#tuto {
+border: none;
+background-color: transparent;
+cursor: pointer;
+}
+
+#tuto:hover {
+  scale: 1.1;
+}
+
+/* Contenedor principal */
+.mainStart {
+  background-color: #4e4b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espaciado entre los elementos */
+}
+
+/* Tarjetas dentro del main */
+.mainStart div {
+  background-color: #969696;
+  width: 25%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen dentro de las tarjetas */
+.mainStart div img {
+  width: 100%; /* Responsivo */
+  max-width: 300px;
+  height: 250px;
+  object-fit: cover; /* Asegura que las imágenes se ajusten bien */
+}
+
+/* Texto dentro de las tarjetas */
+.mainStart div p {
+  margin-top: 10px;
+}
+
+/* Botón dentro de las tarjetas */
+.mainStart div button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Pie de página */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* main select {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+} */
+
+.mainJuego {
+  margin: 0 auto;
+  display: grid;
+
+  /* Cambiar depende de cantida de cartas*/
+
+  grid-template-columns: repeat(10, 1fr);
+  gap: 20px;
+  transform-style: preserve-3d;
+}
+
+.carta {
+
+  height: 260px;
+
+}
+
+.carta:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+}
+.progress-bar > div:last-child {
+  border-right: 0px solid #000;
+}
+.progress-bar-fill {
+  width: 100%;
+  border-right: 10px solid #000;
+}
+
+
+
+#numCartas {
+  background-image: url(../IMAGES/CARTAICONO.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 65px;
+  height: 75px;
+  text-align: center;
+  padding-top: 14px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .info-box {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+  
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.5);
+  }
+  
+  .info-box p {
+    margin: 0;
+  }
+  
+  #time, #clicks {
+    font-weight: bold;
+  }
+  
+  .progress-bar {
+    display: flex;
+    height: 20px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+  }
+  
+
+  .bar {
+    flex: 1;
+    border: 1px solid black;
+  }
+  
+  .bar.blue {
+    background-color: #007bff;
+  }
+  .bar.red {
+    background-color: #8b0532;
+  }
+  
+  .bar.purple {
+    background-color: #a349a4;
+  }
+
+
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
